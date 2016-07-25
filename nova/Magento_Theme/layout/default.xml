@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/pa
+ge_configuration.xsd">
+<body>
+<referenceBlock name="logo">
+<arguments>
+<argument name="logo_file" xsi:type="string">
+Magento_Theme/images/logo.jpg
+</argument>
+<argument name="logo_img_width" xsi:type="number">200</argument>
+<argument name="logo_img_height" xsi:type="number">160</argument>
+</arguments>
+</referenceBlock>
+<referenceBlock name="footer">
+<block class="Magento\Framework\View\Element\Html\Links" name="footer_links_account" after="footer_links">
+<arguments>
+<argument name="css_class" xsi:type="string">Linkovi u podnožju</argument>
+</arguments>
+<block
+class="Magento\Framework\View\Element\Html\Link\Current" name="myaccount-link">
+<arguments>
+<argument name="label" xsi:type="string">Moj račun</argument>
+<argument name="path"
+xsi:type="string">checkout/cart</argument>
+</arguments>
+</block>
+<block
+class="Magento\Framework\View\Element\Html\Link\Current" name="my-cartlink">
+<arguments>
+<argument name="label" xsi:type="string">Moja košarica</argument>
+<argument name="path" xsi:type="string">checkout/cart</argument>
+</arguments>
+</block>
+</block>
+</referenceBlock>
+</body>
+</page>
